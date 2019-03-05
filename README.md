@@ -26,6 +26,7 @@ func main() {
   fmt.Println(club.Name)
 }
 ```
+See the [full documentation on GoDoc](https://godoc.org/github.com/pollen5/brawlstars-go)
 
 ## Running Tests
 ```sh
