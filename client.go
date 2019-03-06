@@ -8,6 +8,17 @@ import (
   "encoding/json"
 )
 
+// Wrapper version information.
+const (
+  VERSION_MAJOR = 0 // Major version integer
+  VERSION_MINOR = 0 // Minor version integer
+  VERSION_PATCH = 1 // Patch version integer
+)
+
+// The current version of the wrapper as a string.
+const Version string = fmt.Sprintf("%d.%d.%d",
+  VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH)
+
 // Client represents a base client used to interact with the API
 // To construct one it is recommended to use the NewClient(token) function
 // or NewClientWithHttp(token, *http.Client) if you would like to pass a custom

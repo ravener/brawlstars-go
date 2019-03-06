@@ -6,7 +6,7 @@ import (
 )
 
 // A string of valid characters in a Tag.
-var ValidTagChars string = "0289PYLQGRJCUV"
+const ValidTagChars string = "0289PYLQGRJCUV"
 
 // Validates if a tag is correct (contains valid characters)
 // Note that a # at the start is legal.
