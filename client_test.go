@@ -94,3 +94,20 @@ func TestCurrentEvents(t *testing.T) {
   fmt.Println(string(b))
   fmt.Println("")
 }
+
+func TestValidTag(t *testing.T) {
+  var res bool
+  res = ValidTag("GGJVJLU2")
+  if res != true {
+    t.Error("ValidTag(GGJVJLU2) returned false but the tag is valid.")
+  }
+  res = ValidTag("#GGJVJLU2")
+  if res != true {
+    t.Error("ValidTag(#GGJVJLU2) returned false but the tag is valid.")
+  }
+  var broke string = "sjsnisnsisnwsjaopqoamzmznsnso"
+  res = ValidTag(broke)
+  if res != false {
+    t.Error(fmt.Sprintf("ValidTag(%s) returned true for an invalid tag.", broke))
+  }
+}
