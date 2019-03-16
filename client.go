@@ -6,6 +6,7 @@ import (
   "io/ioutil"
   "errors"
   "encoding/json"
+  "fmt"
 )
 
 // Wrapper version information.
@@ -16,7 +17,7 @@ const (
 )
 
 // The current version of the wrapper as a string.
-const Version string = fmt.Sprintf("%d.%d.%d",
+var Version string = fmt.Sprintf("%d.%d.%d",
   VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH)
 
 // Client represents a base client used to interact with the API
