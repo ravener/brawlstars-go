@@ -9,16 +9,8 @@ import (
   "fmt"
 )
 
-// Wrapper version information.
-const (
-  VERSION_MAJOR = 0 // Major version integer
-  VERSION_MINOR = 0 // Minor version integer
-  VERSION_PATCH = 1 // Patch version integer
-)
-
 // The current version of the wrapper as a string.
-var Version string = fmt.Sprintf("%d.%d.%d",
-  VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH)
+const Version string = "0.0.2"
 
 // Client represents a base client used to interact with the API
 // To construct one it is recommended to use the NewClient(token) function
