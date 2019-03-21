@@ -6,7 +6,6 @@ import (
   "io/ioutil"
   "errors"
   "encoding/json"
-  "fmt"
 )
 
 // The current version of the wrapper as a string.
