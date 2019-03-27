@@ -9,7 +9,7 @@ import (
 )
 
 // The current version of the wrapper as a string.
-const Version string = "0.0.2"
+const Version string = "0.0.3"
 
 // Client represents a base client used to interact with the API
 // To construct one it is recommended to use the NewClient(token) function
@@ -45,10 +45,12 @@ func (c *Client) httpGet(url string) ([]byte, error) {
   if err != nil {
     return nil, err
   }
+  defer res.Body.Close()
   if res.StatusCode != 200 {
     return nil, errors.New(res.Status)
   }
-  return ioutil.ReadAll(res.Body)
+  bytes, err := ioutil.ReadAll(res.Body)
+  return bytes, err
 }
 
 // GetPlayer fetches a player with the given tag and returns a Player
